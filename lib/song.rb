@@ -22,7 +22,7 @@ attr_accessor :artist, :name
       song_name = file.split(" - ")[1]
       artist_by_name = file.split(" - ")[0]
       song = self.new(song_name)
-      self.artist_name = artist_by_name
+      song.artist_name = artist_by_name
       song
     end
      
