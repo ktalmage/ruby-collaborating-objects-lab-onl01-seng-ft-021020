@@ -29,6 +29,7 @@ attr_accessor :name
     
   def songs
     Song.all.select {|song| song.artist == self}
+    
   end
   
   def self.find_or_create_by_name(name)
@@ -43,6 +44,7 @@ attr_accessor :name
   def self.find(name)
     @@all.find do |artist|
       artist.name == name
+      binding.pry
     end
   end
 
